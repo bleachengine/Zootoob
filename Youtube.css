@@ -1,0 +1,330 @@
+p {
+    font-family: Roboto, arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+div {
+    font-family: Roboto, arial;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(218, 218, 218);
+    z-index: 100;
+    
+}
+.left {
+    align-items: center;
+    display: flex;
+
+
+}
+.hamburger {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+.ytlogo {
+
+    height: 20px;
+}
+.middle {
+    display: flex;
+flex: 1;
+margin-left: 70px;
+margin-right: 35px ;
+max-width: 600px;
+align-items: center;
+
+
+}
+.right {
+    width: 190px;
+    margin-right: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+}
+.uploadicon, .appsicon, .notificon {
+    height: 24px;
+    
+}
+.notifications {
+position: relative;
+
+}
+.notifcount {
+    font-family: roboto, arial;
+    font-size: 12px;
+    background-color: rgb(207, 2, 2);
+    color: white;
+    position: absolute;
+    top: -4px;
+    right: -9px;
+    padding: 3px 7px 3px 7px;
+    border-radius: 15px;
+}
+.mineicon {
+    height: 32px;
+    width: 32px;
+    object-fit: cover;
+    border-radius: 16px;
+    
+}
+
+.searchbar {
+flex: 1;
+height: 36px;
+font-size: 16px;
+font-family: Roboto, arial;
+box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+padding-left: 8px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(209, 209, 209);
+border-radius: 2px;
+outline: none;
+width: 0;
+}
+
+.searchimage {
+    height: 40px;
+    width: 64px;
+    border-style: solid;
+    margin-left: -1px;
+    border-width: 1px;
+    border-color: rgb(209, 209, 209);
+
+}
+.searchicon {
+    height: 25px;   
+    background-color: rgb(240, 240, 240);
+}
+
+.searchimage .tooltip,
+.voicesearch .tooltip,
+.uploadcontainer .tooltip,
+.appscontainer .tooltip 
+ {
+    font-family: Roboto, arial;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -33px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.searchimage, .voicesearch, 
+.uploadcontainer, .appscontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.searchimage:hover .tooltip,
+.voicesearch:hover .tooltip,
+.uploadcontainer:hover .tooltip,
+.appscontainer:hover .tooltip
+{
+opacity: 1;
+}
+
+.voicesearch {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(244, 244, 244);
+
+}
+.voiceicon {
+    height: 24px;
+    
+}
+
+.leftbar {
+    z-index: 101;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 70px;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+}
+.leftbaricon {
+height: 78px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+cursor: pointer;
+} 
+
+.leftbaricon:hover {
+background-color: gainsboro;
+}
+
+.leftbar img {
+height: 28px;
+margin-bottom: 4px;
+}
+
+.leftbar div {
+    font-family: roboto, arial;
+    font-size: 10px;
+}
+
+.videogrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 40px;
+}
+@media (max-width: 850px)
+{ 
+   .videogrid{
+    grid-template-columns: 1fr 1fr;
+   }
+}
+@media (min-width: 851px) and (max-width: 999) 
+{ 
+   .videogrid{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+.thumbnail {
+    position: relative;
+
+}
+
+.timestamp {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    font-family: Roboto, arial;
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 11px;
+    right: 7px;
+}
+.videothumbnail {
+    width: 100%;
+    border-radius: 12px;
+   
+}
+
+.videoinfo {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    margin-top: 10px;
+}
+
+.picture {
+    height: 44px;
+    width: 44px;
+    object-fit: cover;
+    border-radius: 25px;
+
+}
+ /* Channel tooltip starts (with relative class) */
+.picturecontainer {
+    position: relative; 
+    cursor: pointer;
+}
+.channeltooltip {
+    font-family: Roboto, arial;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 200px;
+    border-radius: 6px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+.picturecontainer:hover .channeltooltip {
+    opacity: 1;
+}
+.tooltipbox {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.channeltipicon {
+    width: 100%;
+    border-radius: 30px;
+}
+.channelstats {
+    flex: 1;
+    margin-left: 10px;
+}
+.channel {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px; 
+}
+.subscribers {
+    font-size: 16px;
+    color: gray }  
+/* Channel tooltip Ends */
+
+
+.videodetail {
+    margin-left: 16px;
+
+}
+
+.videotitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.channelname {
+    font-size: 14px;
+    color: rgb(90, 90, 90);
+    margin-top: 10px;
+}
+
+.videostats {
+    font-size: 14px;
+    color: rgb(90, 90, 90);
+    margin-top: 4px;
+}
+
+body {
+    margin: 0px;
+    padding-top: 80px;
+    padding-left: 96px;
+    padding-right: 25px;
+    background-color: rgb(245, 245, 245);
+}
